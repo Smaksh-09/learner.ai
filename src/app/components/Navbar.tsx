@@ -18,7 +18,7 @@ const navItemVariants = {
 export default function NavBar() {
   return (
     <motion.div
-      className="sticky top-0 z-50 h-16 w-full flex items-center justify-between px-6 bg-gray-900 text-white shadow-md"
+      className="sticky top-0 z-50 h-16 w-full flex items-center justify-between px-6 text-white shadow-md"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
