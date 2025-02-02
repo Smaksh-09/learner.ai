@@ -20,7 +20,7 @@ export default function Hero() {
 
   return (
     <motion.div
-      className="flex flex-col items-center justify-center text-center py-20 px-4 text-white"
+      className="flex flex-col items-center justify-center text-center py-20 px-4 text-black"
       variants={container}
       initial="hidden"
       animate="show"
@@ -44,9 +44,9 @@ export default function Hero() {
         <input
           type="text"
           placeholder="What do you want to learn today?"
-          className="flex-1 p-3 rounded-l-md bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-1 p-3 rounded-l-md bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <button className="bg-white p-3 rounded-r-md hover:bg-purple transition-colors text-black">
+        <button className="bg-black p-3 rounded-r-md hover:bg-gray-800 transition-colors text-white">
           Generate Quiz
         </button>
       </motion.div>

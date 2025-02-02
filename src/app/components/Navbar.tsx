@@ -18,14 +18,14 @@ const navItemVariants = {
 export default function NavBar() {
   return (
     <motion.div
-      className="sticky top-0 z-50 h-16 w-full flex items-center justify-between px-6 text-white shadow-md"
+      className="sticky top-0 z-50 h-16 w-full flex items-center justify-between px-6 text-black bg-white/80 backdrop-blur-sm shadow-md"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       {/* Left: Logo */}
       <motion.h2
-        className="text-2xl font-bold"
+        className="text-2xl font-bold text-black"
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -34,12 +34,12 @@ export default function NavBar() {
       </motion.h2>
 
       {/* Center: Navigation Links */}
-      <nav className="hidden md:flex space-x-6">
+      <nav className="hidden md:flex space-x-6 text-black">
         {["Home", "Pricing", "Features", "About"].map((item, index) => (
           <motion.a
             key={item}
             href="#"
-            className="relative hover:text-gray-400 focus:outline-none"
+            className="relative hover:text-gray-600 focus:outline-none"
             custom={index}
             variants={navItemVariants}
             initial="hidden"
@@ -48,7 +48,7 @@ export default function NavBar() {
           >
             {item}
             <motion.span
-              className="absolute left-0 bottom-[-2px] h-0.5 w-full bg-gray-400"
+              className="absolute left-0 bottom-[-2px] h-0.5 w-full bg-gray-600"
               initial={{ scaleX: 0 }}
               whileHover={{ scaleX: 1 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}

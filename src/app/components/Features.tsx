@@ -47,7 +47,7 @@ const cardVariants = {
 export default function Features() {
   return (
     <motion.div
-      className="py-20 px-4 text-gray-900"
+      className="py-20 px-4 text-black bg-transparent"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -77,7 +77,7 @@ export default function Features() {
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="p-6 rounded-lg shadow-lg border border-gray-200 flex flex-col items-center"
+            className="p-6 rounded-lg shadow-lg border border-gray-200 bg-white/50 backdrop-blur-sm flex flex-col items-center"
             variants={cardVariants}
             whileHover={{ scale: 1.05, y: -5 }}
             whileTap={{ scale: 0.95 }}
@@ -92,7 +92,7 @@ export default function Features() {
             <motion.h3 className="text-xl font-semibold mb-2">
               {feature.title}
             </motion.h3>
-            <motion.p className="text-gray-600 text-center">
+            <motion.p className="text-gray-700 text-center">
               {feature.description}
             </motion.p>
           </motion.div>

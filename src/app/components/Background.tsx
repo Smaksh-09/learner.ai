@@ -12,15 +12,15 @@ interface DotProps {
 }
 
 const Background: React.FC = () => {
-  const dotCount = 50;
+  const dotCount = 100;
 
   // Generate properties for each dot only once
   const dots = useMemo((): DotProps[] => {
     return Array.from({ length: dotCount }, () => {
       const left = Math.random() * 100; // percentage
       const top = Math.random() * 100; // percentage
-      const deltaX = (Math.random() - 0.5) * 30; // offset between -10 and 10
-      const deltaY = (Math.random() - 0.5) * 30; // offset between -10 and 10
+      const deltaX = (Math.random() - 0.5) * 20; // offset between -10 and 10
+      const deltaY = (Math.random() - 0.5) * 20; // offset between -10 and 10
       const duration = 3 + Math.random() * 4; // animation duration between 3s and 7s
       const delay = Math.random() * 2; // delay up to 2s
       return {
@@ -37,7 +37,7 @@ const Background: React.FC = () => {
   return (
     <div
       className="absolute inset-0 overflow-hidden"
-      style={{ backgroundColor: '#000' }}
+      style={{ backgroundColor: '#fff' }}
     >
       {dots.map((dot, index) => (
         <motion.div
@@ -49,7 +49,7 @@ const Background: React.FC = () => {
             width: 4,
             height: 4,
             borderRadius: '50%',
-            backgroundColor: '#fff',
+            backgroundColor: '#000',
           }}
           animate={{
             x: [0, dot.deltaX, 0],

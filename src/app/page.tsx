@@ -5,7 +5,7 @@ import Features from "./components/Features";
 
 export default function page(){
     return (
-        <div className="relative min-h-screen w-full bg-black">
+        <div className="relative min-h-screen w-full bg-white">
             <Background/>
             <div className="relative z-10">
                 <NavBar/>
