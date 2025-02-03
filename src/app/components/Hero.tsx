@@ -1,9 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
   const[inputvalue,setInputValue]=useState("");
+  const router=useRouter();
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -20,6 +22,9 @@ export default function Hero() {
     show: { opacity: 1, y: 0 }
   };
 
+  const handleOnclick = () => {
+    router.push(`/quiz?topic=${encodeURIComponent(inputvalue)}`);
+  }
   return (
     <motion.div
       className="flex flex-col items-center justify-center text-center py-20 px-4 text-black"
@@ -50,7 +55,8 @@ export default function Hero() {
           className="flex-1 p-3 rounded-l-md bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           onChange={(e)=>{setInputValue(e.target.value)}}
         />
-        <button className="bg-black p-3 rounded-r-md hover:bg-gray-800 transition-colors text-white ">
+        <button className="bg-black p-3 rounded-r-md hover:bg-gray-800 transition-colors text-white "
+        onClick={handleOnclick}>
           Generate Quiz
         </button>
       </motion.div>
