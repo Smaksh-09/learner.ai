@@ -1,7 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+  const[inputvalue,setInputValue]=useState("");
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -42,11 +44,13 @@ export default function Hero() {
         variants={item}
       >
         <input
+         value={inputvalue}
           type="text"
           placeholder="What do you want to learn today?"
           className="flex-1 p-3 rounded-l-md bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          onChange={(e)=>{setInputValue(e.target.value)}}
         />
-        <button className="bg-black p-3 rounded-r-md hover:bg-gray-800 transition-colors text-white">
+        <button className="bg-black p-3 rounded-r-md hover:bg-gray-800 transition-colors text-white ">
           Generate Quiz
         </button>
       </motion.div>
