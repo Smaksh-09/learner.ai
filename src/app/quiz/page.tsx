@@ -1,9 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import axios from "axios";
 
 export default function QuizPage() {
+  const router = useRouter();
   const [quiz, setQuiz] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const searchParams = useSearchParams();
@@ -51,7 +52,10 @@ export default function QuizPage() {
       }
     });
     setScore(correctAnswers);
-    setSubmitted(true);
+    setSubmitted(true); 
+    
+    // Navigate to results page with score
+    router.push(`/Learning?score=${correctAnswers}&total=${quiz.quiz.length}&topic=${topic}`);
   };
 
   return (
