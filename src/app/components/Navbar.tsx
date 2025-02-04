@@ -35,7 +35,7 @@ export default function NavBar() {
 
       {/* Center: Navigation Links */}
       <nav className="hidden md:flex space-x-6 text-black">
-        {["Home", "Pricing", "Features", "About"].map((item, index) => (
+        {["Home", "Pricing", "Features", "Profile"].map((item, index) => (
           <motion.a
             key={item}
             href="#"

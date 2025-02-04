@@ -9,10 +9,10 @@ export function getGeminiAI() {
 
 export async function generateLearningContent(topic: string, score: number, total: number) {
   const genAI = getGeminiAI();
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash-exp' });
 
   const prompt = `Generate **detailed educational content** for the topic: "${topic}".  
-The user scored ${score}/${total} in a quiz on this topic.  
+The user scored ${score}/${total} in a quiz on this topic so generate the content accordingly.  
 Create an **in-depth learning resource** that includes:
 
 1. **Comprehensive Summary** (Minimum 300 words)

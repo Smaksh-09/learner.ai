@@ -3,6 +3,8 @@ import NavBar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
 
+import Pricing from "./components/Pricing";
+
 export default function page(){
     return (
         <div className="relative min-h-screen w-full bg-white">
@@ -11,6 +13,7 @@ export default function page(){
                 <main className="relative min-h-screen">
                     <Hero key="hero" />
                     <Features/>
+                    <Pricing/>
                 </main>
             </div>
         </div>
