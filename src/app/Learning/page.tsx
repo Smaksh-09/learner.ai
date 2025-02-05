@@ -1,5 +1,5 @@
 "use client";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
@@ -16,6 +16,7 @@ interface EducationalContent {
 
 export default function Learn() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const score = parseInt(searchParams.get("score") || "0");
   const total = parseInt(searchParams.get("total") || "10");
   const topic = searchParams.get("topic") || "Unknown Topic";
@@ -229,6 +230,21 @@ export default function Learn() {
               ))}
             </ul>
           )}
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="mt-12 flex justify-center"
+        >
+          <button
+            onClick={() => router.push('/')}
+            className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors flex items-center space-x-2"
+          >
+            <span>←</span>
+            <span>Back to Home</span>
+          </button>
         </motion.div>
       </div>
     </div>
