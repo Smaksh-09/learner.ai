@@ -1,6 +1,7 @@
 import NavBar from "./components/Navbar";
 
 import Hero from "./components/Hero";
+import About from "./components/About";
 import Features from "./components/Features";
 
 import Pricing from "./components/Pricing";
@@ -12,7 +13,9 @@ export default function page(){
                 <NavBar/>
                 <main className="relative min-h-screen">
                     <Hero key="hero" />
+                    
                     <Features/>
+                    <About />
                     <Pricing/>
                 </main>
             </div>
