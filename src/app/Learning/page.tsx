@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 
@@ -14,7 +14,7 @@ interface EducationalContent {
   recommended_resources: string[];
 }
 
-export default function Learn() {
+function LearningContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const score = parseInt(searchParams.get("score") || "0");
@@ -248,5 +248,21 @@ export default function Learn() {
         </motion.div>
       </div>
     </div>
+  );
+}
+
+export default function Learn() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex justify-center items-center bg-white">
+        <motion.div 
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          className="h-12 w-12 border-4 border-black border-t-transparent rounded-full"
+        />
+      </div>
+    }>
+      <LearningContent />
+    </Suspense>
   );
 }
