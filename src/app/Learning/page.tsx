@@ -8,7 +8,7 @@ interface EducationalContent {
   summary: string;
   key_concepts: string[];
   detailed_explanation: string;
-  code_examples: Array<{ code: string; explanation: string }>;
+  Real_World_Applications: Array<{ Applications: string; explanation: string }>;
   common_mistakes: Array<{ mistake: string; solution: string }>;
   advanced_insights: string;
   recommended_resources: string[];
@@ -82,7 +82,7 @@ export default function Learn() {
     { id: "summary", label: "Summary" },
     { id: "concepts", label: "Key Concepts" },
     { id: "detailed", label: "Detailed Explanation" },
-    { id: "code", label: "Code Examples" },
+    { id: "Applications", label: "Real world Examples" },
     { id: "mistakes", label: "Common Mistakes" },
     { id: "advanced", label: "Advanced Insights" },
     { id: "resources", label: "Resources" },
@@ -163,9 +163,9 @@ export default function Learn() {
             </div>
           )}
 
-          {activeTab === "code" && (
+          {activeTab === "Applications" && (
             <div className="space-y-8">
-              {eduContent.code_examples.map((example, index) => (
+              {eduContent.Real_World_Applications.map((example, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -174,7 +174,7 @@ export default function Learn() {
                   className="bg-gray-50 rounded-lg p-6"
                 >
                   <pre className="bg-black text-white p-4 rounded-lg overflow-x-auto">
-                    <code>{example.code}</code>
+                    <code>{example.Applications}</code>
                   </pre>
                   <p className="mt-4 text-gray-700">{example.explanation}</p>
                 </motion.div>

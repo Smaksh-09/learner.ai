@@ -18,8 +18,8 @@ Create an **in-depth learning resource** that includes:
 1. **Comprehensive Summary** (Minimum 300 words)
 2. **Key Concepts** (List at least 10)
 3. **Detailed Explanation** (Minimum 500 words, with step-by-step breakdowns and real-world analogies)
-4. **Code Examples**  
-   - At least **3 code snippets** with comments  
+4. **Real World Applications**  
+   - At least **3 code snippets**/Numericals with comments  
    - Provide explanations **line by line**
 5. **Common Mistakes and Best Practices**  
    - Identify **5 common mistakes** learners make  
@@ -38,10 +38,11 @@ json
   "summary": "...",
   "key_concepts": ["...", "...", "..."],
   "detailed_explanation": "...",
-  "code_examples": [
-    { "code": "...", "explanation": "..." },
-    { "code": "...", "explanation": "..." }
-  ],
+  "Real_World_Applications": [
+    { "Applications": "...", "explanation": "..." },
+    { "Applications": "...", "explanation": "..." }
+]
+,
   "common_mistakes": [
     { "mistake": "...", "solution": "..." }
   ],
