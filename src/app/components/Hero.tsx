@@ -42,7 +42,7 @@ export default function Hero() {
         className="text-lg mb-8 max-w-2xl"
         variants={item}
       >
-        Enter a topic below and let our AI create a custom quiz just for you.
+        Take this quick quiz to assess your current level. Based on your score, we'll provide personalized learning content to help you improve!
       </motion.p>
       <motion.div
         className="flex w-full max-w-md space-x-2"
