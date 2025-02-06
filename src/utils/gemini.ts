@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-export function getGeminiAI() {
+export function getGeminiAI() { 
   const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
   if (!apiKey) throw new Error("GEMINI_API_KEY is not configured");
   
@@ -49,6 +49,7 @@ json
   "advanced_insights": "...",
   "recommended_resources": ["...", "...", "..."]
 }
+  there should be no bold text , simple plain text , no ticks nothing just as i directed not even asteriks
 `
 
   try {
