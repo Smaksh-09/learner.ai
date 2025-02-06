@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 export async function POST(req: Request) {
   try {
     const { topic } = await req.json();
-    const apikey = process.env.GEMINI_API_KEY;
+    const apikey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 
     if (!apikey) {
       console.error('Missing API key');
